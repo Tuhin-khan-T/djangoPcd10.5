@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is home page</h1>
+    <h2>Author : {{author}}</h2>
+    <h2>Age : {{age}}</h2>
+    <h2>Father :{{father}}</h2>
+    <h2>Mother :{{Mother}}</h2>
+    <h2>Brother :{{brother}}</h2>
+     {{lst}}
+     <h1>{{ val | add:"alli" }}</h1>
+     <h2>{{ val | length }}</h2>
+     <h2>{{ val | capfirst }}</h2>
+     <h2>{{ val | cut:"ra" }}</h2>
+     <h2>{{ val | linenumbers }}</h2>
+     <h2>{{ value | default:"nothing" }}</h2>
+     <h3>{{ nam | dictsort:"name" }}</h3>
+     <h2>{{ valu | filesizeformat }}</h2>
+     <h2>{{ some_list | slice:":2" }}</h2>
+    <h2>{{ some_list| slugify }}</h2>
+    <h2>{{ some_list | title }}</h2>
+    <h2>{{ some_list | wordcount }}</h2>
+    <h1>{{date| time:"H:i" }}</h1>
+    <h2>{{ date | date:"D d M Y" }}</h2>
+    <h1>{{ lst | join:" - " }}</h1>
+    <h1>{{'Happy coding. Python is fun.' | truncatewords:2}}</h1>
+
+    
+
+
+    <!-- Conditional Statement -->
+    {% if age >= 20 %}
+        <h4>i give you car</h4>
+    {% elif age >= 10 and age <= 19 %}
+        <h4>i give buy cycel</h4>
+    {% else %}
+        <h4>You're a child</h4>
+    {% endif %}
+    
+    
+   {% if author == 'Rahim' %}
+       <h4>Yes, you are Rahim</h4>
+    {% elif author != 'Rahim' %}
+       <h4>does not match the Rahim</h4>
+    {% else %}
+      <h4>sorry</h4>
+   {% endif %}
+    
+
+    <!-- For loop -->
+    {% for i in courses %}
+    <h3>{{i.id}} {{i.name}} {{i.fee}} </h3>
+    {% endfor %}
+    
+</body>
+</html>
